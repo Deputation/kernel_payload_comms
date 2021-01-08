@@ -11,9 +11,9 @@ This repository contains a proof of concept demonstrating communication via mapp
 
 ## A mapped driver?
 Mapped drivers have some limitations, and work differently in some occasions: 
-- They cannot be unloaded by simply stopping their service, since they don't have one (this is solved by simply jumping to ExFreePool in unmap.asm)
+- They cannot be unloaded by simply stopping their service, since they don't have one (this is solved by simply jumping to ExFreePool in unmap.asm, hence freeing the memory the driver is mapped in and never returning to it)
 - PatchGuard (windows' kernel patch protection) won't let the payload register callbacks regularly and will cause the system to crash with a blue screen of death (bsod) in case the payload tries doing so. To get around the callbacks issue that may be needed to get other processes' modules, the utils.hpp file in the kdriver project comes in handy, implementing PEB walking to iterate the linked list of modules in memory so that we can grab the one we need. 
-- \_\_try \_\_except blocks will not work in a mapped driver to catch exceptions. 
+- `__try {} __except() {}` blocks will not work in a mapped driver to catch exceptions. Or in non module-backed memory at all, for the matter.
 
 Just using a manually mapped driver, however, will not cause a blue screen of death; manually mapping your driver is one of the many ways to overcome DSE (driver signature enforcement) on Windows 10, that requires all drivers to be digitally signed to be loaded regularly as system services. The terms payload and mapped driver are used interchangeably throughout this README file. To manually map a driver, it is generally needed to find a vulnerable driver that allows arbitrary kernel memory reading and writing to gain code execution in the kernel.
 
