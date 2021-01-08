@@ -26,7 +26,7 @@ This project, as stealthy as it tries to be via very simple and straightforward 
 - System thread enumeration (We're starting a system thread with a start address that is not backed by any real module).
 - Stackwalking (Even if the start address is spoofed either via DKOM or via code-caves, APCs can be issued to the thread, and the stack can be walked, revealing code execution in addresses that are not backed by any real module).
 - MmUnloadedDrivers & PiDDBCacheTable (Unloading the intel driver is not stealthy at all, it will leave traces in the MmUnloadedDrivers array and in the undocumented PiDDBCacheTable linked list).
-- The windows system evt logs (Unloading the intel driver will leave logs in here).
+- The windows system evt logs (Unloading the intel driver will leave logs in there).
 
 ## Getting started.
 - Install VS2019
