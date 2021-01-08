@@ -30,12 +30,14 @@ kdriver is a driver that was specifically designed to work with this project's k
 This project can be used if, for any reason, it is necessary to conduct research on processes that may have had their memory protected by a driver in kernel-mode via a callback that strips handles to the process registered via ObRegisterCallbacks. It can also be easily re-worked to work as a .dll and, with a hooking library, ReadProcessMemory and WriteProcessMemory could be hooked, bringing back to life analysis tools that rely on usermode APIs for their functioning by emulating the behavior of said APIs in the kernel payload. For instance, one could hook `ReadProcessMemory` with something like [MinHook](https://github.com/TsudaKageyu/minhook) so that `kdmapper::comms::read_vm<T>` is called instead.
 
 ## Detection vectors
-This project, as stealthy as it tries to be via very simple and straightforward methods, can easily be detected by anti-virus and anti-cheating solutions, it takes a few tricks to be able to map a kernel payload and go undetected which, unfortunately, I can't share on GitHub for ethical reasons. Some of the methods via which detection could be achieved are:
+This project, as stealthy as it tries to be via very simple and straightforward methods, can easily be detected by anti-virus and anti-cheating solutions, it takes a few tricks to be able to map a kernel payload and go undetected which, unfortunately, I can't share (as of now) on GitHub for ethical reasons. Some of the methods via which detection could be achieved are:
 
 - System thread enumeration (We're starting a system thread with a start address that is not backed by any real module).
 - Stackwalking (Even if the start address is spoofed either via DKOM or via code-caves, APCs can be issued to the thread, and the stack can be walked, revealing code execution in addresses that are not backed by any real module).
 - MmUnloadedDrivers & PiDDBCacheTable (Unloading the intel driver is not stealthy at all, it will leave traces in the MmUnloadedDrivers array and in the undocumented PiDDBCacheTable linked list).
 - The windows system evt logs (Unloading the intel driver will leave logs in there).
+
+**Some** ways of getting around some of these detection vectors will be added in the future for **educational purposes.**
 
 ## Getting started
 - Install VS2019
