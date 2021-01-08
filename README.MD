@@ -31,7 +31,7 @@ This project, as stealthy as it tries to be via very simple and straightforward 
 ## Getting started.
 - Install VS2019
 - Install the WDK (Windows driver kit) + the WDK extension for VS2019
-- Build as-is, release mode already has what needs set-up to build a working kdmapper payload (A custom entry point).
+- Build as-is, release mode in x64 already has what needs set-up to build a working kdmapper payload (A custom entry point).
 - Open a CMD prompt as admin.
 - cd into the directory containing the files that were just built.
 - Run `kdmapper.exe kdriver.sys`
