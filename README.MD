@@ -37,7 +37,7 @@ This project, as stealthy as it tries to be via very simple and straightforward 
 - MmUnloadedDrivers & PiDDBCacheTable (Unloading the intel driver is not stealthy at all, it will leave traces in the MmUnloadedDrivers array and in the undocumented PiDDBCacheTable linked list).
 - The windows system evt logs (Unloading the intel driver will leave logs in there).
 
-**Some** ways of getting around some of these detection vectors will be added in the future for **educational purposes.**
+Some ways of getting around **some** of these detection vectors will be added in the future for **educational purposes.**
 
 ## Getting started
 - Install VS2019
