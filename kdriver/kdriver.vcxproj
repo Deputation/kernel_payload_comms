@@ -177,9 +177,6 @@
     <ClInclude Include="utils.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ia32.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <MASM Include="unmap.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

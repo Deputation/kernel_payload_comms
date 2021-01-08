@@ -10,7 +10,6 @@
 #include <ndis.h>
 #include <intrin.h>
 
-#include "ia32.hpp"
 #include "imports.hpp"
 #include "utils.hpp"
 #include "comms.hpp"

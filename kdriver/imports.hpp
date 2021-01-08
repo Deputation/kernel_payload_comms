@@ -1,6 +1,10 @@
 #pragma once
 
-typedef uint8_t BYTE;
+using uint8_t = unsigned char;
+using uint16_t = unsigned short;
+using uint32_t = unsigned int;
+using uint64_t = unsigned long long;
+using BYTE = uint8_t;
 
 typedef enum _SYSTEM_INFORMATION_CLASS
 {

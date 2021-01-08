@@ -39,11 +39,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ia32.hpp">
-      <Filter>Header Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <MASM Include="unmap.asm">
       <Filter>Source Files</Filter>
     </MASM>
