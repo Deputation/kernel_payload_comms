@@ -1,6 +1,9 @@
 # kernel_payload_comms ⚡💻
 The code is released under the MIT license. Bugs will be addressed as soon I've got time available if any are found, all the code in the repo was written in about a morning and an afternoon, so some oversights might be present. PRs are welcome. 🧐
 
+## Comments
+Generally, I didn't go over kdmapper's code too much and I only commented parts of code that I edited for this PoC's needs. I did, however, comment almost everything in kdriver and the namespaces and functions I added to kdmapper's code to achieve communication with the kernel payload, please feel free to DM me on twitter, open issues or discussions here if there's anything you'd like to ask or if there's anything you'd want to see fixed.
+
 ## What is it?
 This repository contains a proof of concept demonstrating communication via mapped shared memory structures between a user-mode process and a kernel-mode payload on Windows 10 20H2. The usermode component of this repository, [kdmapper](https://github.com/z175/kdmapper), was originally created by z195, kdmapper is a driver mapper that exploits a vulnerability in a signed intel driver to map a kernel payload and execute it. This project, however, *started* from a slightly modified version of [kdmapper](https://github.com/TheCruZ/kdmapper-1803-20H2) from TheCruZ. This project's kdmapper has also been largely refactored to follow the snake_case convention as closely as possible without, however, editing windows' structures.
 
