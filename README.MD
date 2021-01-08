@@ -34,7 +34,7 @@ This project, as stealthy as it tries to be via very simple and straightforward 
 - MmUnloadedDrivers & PiDDBCacheTable (Unloading the intel driver is not stealthy at all, it will leave traces in the MmUnloadedDrivers array and in the undocumented PiDDBCacheTable linked list).
 - The windows system evt logs (Unloading the intel driver will leave logs in there).
 
-## Getting started.
+## Getting started
 - Install VS2019
 - Install the WDK (Windows driver kit) + the WDK extension for VS2019
 - Build as-is, release mode in x64 already has what needs set-up to build a working kdmapper payload (A custom entry point).
