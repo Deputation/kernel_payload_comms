@@ -1,4 +1,5 @@
 # kernel_payload_comms ⚡💻
+PRs are welcome. 🧐
 
 ## What is it?
 This repository contains a proof of concept demonstrating communication via mapped shared memory structures between a user-mode process and a kernel-mode payload on Windows 10 20H2. The usermode component of this repository, [kdmapper](https://github.com/z175/kdmapper), was originally created by z195. This project, however, *started* from a slightly modified version of [kdmapper](https://github.com/TheCruZ/kdmapper-1803-20H2) from TheCruZ. This project's kdmapper has also been largely refactored to follow the snake_case convention as closely as possible without, however, editing windows' structures.
