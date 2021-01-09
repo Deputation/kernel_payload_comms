@@ -29,7 +29,7 @@ This proof of concept's kdmapper is not like the ordinary one. It contains some 
 - An entire comms namespace to setup and maintain communication with the kernel payload in the kdmapper namespace
 
 ## kdriver
-kdriver is a driver that was specifically designed to work with this project's kdmapper. It takes the memory structure's virtual address in the kdmapper process' address space, takes its physical address, maps it and instaurates communication with the usermode process, making virtual memory read and write operations without a handle from/to the process you want to read and write frmo/to trivial. kdriver is designed to work as "driverless" without a PDRIVER_OBJECT assigned to it, therefore it is more of a payload than a proper driver. kdriver's project features a few nice things:
+kdriver is a driver that was specifically designed to work with this project's kdmapper. It takes the memory structure's virtual address in the kdmapper process' address space, takes its physical address, maps it and instaurates communication with the usermode process, making virtual memory read and write operations without a handle from/to the process you want to read and write frmo/to trivial. kdriver is designed to work as "driverless" without a DRIVER_OBJECT assigned to it, therefore it is more of a payload than a proper driver. kdriver's project features a few nice things:
 
 - A DEBUG_MODE constant to enable/disable printing
 - A pattern scanner to scan memory
