@@ -45,7 +45,7 @@ This project can be used if, for any reason, it is necessary to conduct research
 This project, as stealthy as it tries to be via very simple and straightforward methods, can easily be detected by anti-virus and anti-cheating solutions, it takes a few tricks to be able to map a kernel payload and go undetected which, unfortunately, I can't share (as of now) on GitHub for ethical reasons. Some of the methods via which detection could be achieved are:
 
 - System thread enumeration (We're starting a system thread with a start address that is not backed by any real module).
-- Stackwalking (Even if the start address is spoofed either via DKOM or via code-caves, APCs can be issued to the thread, and the stack can be walked, revealing code execution in addresses that are not backed by any real module).
+- Stackwalking (Even if the start address is spoofed either via DKOM or via code-caves, APCs can be issued to the thread, and the stack can be walked, revealing code execution in addresses that are not backed by any real module. The thread can also be "asynchronously stackwalked" by just copying the stack asynchronously from the system thread's data structures.).
 - MmUnloadedDrivers & PiDDBCacheTable (Unloading the intel driver is not stealthy at all, it will leave traces in the MmUnloadedDrivers array and in the undocumented PiDDBCacheTable linked list).
 - The windows system evt logs (Unloading the intel driver will leave logs in there).
 
