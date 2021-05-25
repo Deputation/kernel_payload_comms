@@ -1,7 +1,7 @@
 # kernel_payload_comms
 
 ## Code
-The code is released under the MIT license. Bugs will be addressed as soon I've got time available if any are found, all the code in the repo was written in about a morning and an afternoon, so some oversights might be present. PRs are welcome. 🧐
+The code is released under the MIT license. Bugs will be addressed as soon I've got time available if any are found, all the code in the repo was written in about a morning and an afternoon, so some oversights might be present. PRs are welcome.
 
 ## Comments
 Generally, I didn't go over kdmapper's code too much and I only commented parts of code that I edited for this PoC's needs. I did, however, comment almost everything in kdriver and the namespaces and functions I added to kdmapper's code to achieve communication with the kernel payload, please feel free to DM me on twitter, open issues or discussions here if there's anything you'd like to ask or if there's anything you'd want to see fixed.
